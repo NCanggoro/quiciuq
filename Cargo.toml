@@ -1,0 +1,12 @@
+[package]
+name = "hello-quic"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.98"
+libp2p-core = { version = "0.43.1", features = [] }
+libp2p-identity = { version = "0.2.12", features = ["ed25519", "rand" ] } 
+libp2p-tls = "0.6.2"
+s2n-quic = { version = "1.62.0", default-features = false, features = ["provider-tls-rustls", "provider-address-token-default"] } 
+tokio = { version = "1.47.0", features = ["full"] }
